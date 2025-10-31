@@ -34,17 +34,6 @@ const Profile = () => {
                         </p>
                     </div>
                 </div>
-
-                <div className="profile-stats" role="list" aria-label="Stats">
-                    <div className="profile-stat" role="listitem">
-                        <span className="profile-stat-label">total meals</span>
-                        <span className="profile-stat-value">{profile?.totalMeals}</span>
-                    </div>
-                    <div className="profile-stat" role="listitem">
-                        <span className="profile-stat-label">customer served</span>
-                        <span className="profile-stat-value">{profile?.customersServed}</span>
-                    </div>
-                </div>
             </section>
 
             <hr className="profile-sep" />
@@ -52,13 +41,12 @@ const Profile = () => {
             <section className="profile-grid" aria-label="Videos">
                 {videos.map((v) => (
                     <div key={v._id} className="profile-grid-item">
-                        {/* Placeholder tile; replace with <video> or <img> as needed */}
-
 
                         <video
                             className="profile-grid-video"
                             style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                            src={v.video} muted ></video>
+                            src={v.video} muted 
+                        ></video>
 
 
                     </div>
